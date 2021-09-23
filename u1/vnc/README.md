@@ -38,14 +38,20 @@
 
 #### **4.1 Comprobaciones finales de OpenSUSE**
 
+![](img/025.png)
 
+![](img/026.png)
 
 ## **5. Comprobaciones con SSOO cruzados**
 
 ![](img/016.png)
 
-![](img/003.png)
+
 
 ## **6. Display 0 en GNU/Linux**
 
 ![](img/021.png)
+
+![](img/022.png)
+
+![](img/027.png)
