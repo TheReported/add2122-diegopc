@@ -5,6 +5,11 @@
 ![](img/007.png)
 
 ![](img/013.png)
+
+#### **1.1 Ir a una MV GNU/Linux**
+
+![](img/014.png)
+
 ## **2. Windows: Master VNC**
 
 ![](img/012.png)
