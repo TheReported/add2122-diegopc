@@ -44,9 +44,17 @@
 
 ## **5. Comprobaciones con SSOO cruzados**
 
+- **OpenSUSE Master / Windows Slave**
+
 ![](img/016.png)
 
+- **OpenSUSE Master / Windows Slave**
 
+![](img/028.png)
+
+![](img/029.png)
+
+![](img/030.png)
 
 ## **6. Display 0 en GNU/Linux**
 
