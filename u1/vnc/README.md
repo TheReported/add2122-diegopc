@@ -1,5 +1,28 @@
 # **P1:Acceso Remoto VNC**
 
+## **0. Configuraciones de red previas**
+
+- **En clase**
+
+| Rol | OS | Ip |
+| ----------- | ----------- |----------- |
+| Slave VNC | OpenSUSE | 172.19.23.31 |
+| Master VNC | OpenSUSE | 172.19.23.32 |
+| Slave VNC | Windows | 172.19.23.11 |
+| Master VNC | Windows | 172.19.23.12 |
+
+
+- **En casa**
+
+| Rol | OS | Ip |
+| ----------- | ----------- |----------- |
+| Slave VNC | OpenSUSE | 172.19.23.31 |
+| Master VNC | OpenSUSE | 172.19.23.32 |
+| Slave VNC | Windows | 192.168.1.63 |
+| Master VNC | Windows | 192.168.1.62 |
+
+
+
 ## **1. Windows: Slave VNC**
 
 ![](img/007.png)
