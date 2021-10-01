@@ -153,3 +153,13 @@
 
 
 ## **6. Uso de SSH como túnel para X**
+
+## **7. Aplicaciones Windows nativas**
+
+## **8. Restricciones de uso**
+
+### **8.1 Restricción sobre un usuario**
+
+### **8.2 Restricción sobre una aplicación**
+
+## **9. Servidor SSH en Windows**
