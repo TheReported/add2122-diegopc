@@ -210,4 +210,6 @@ FALTA CAPTURA WINDOWS
 
 ### **8.2 Restricción sobre una aplicación**
 
+
+
 ## **9. Servidor SSH en Windows**
