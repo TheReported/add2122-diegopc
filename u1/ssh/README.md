@@ -123,11 +123,11 @@
 
 ![](img/031.png)
 
-- Lo que sucede es que aparece la misma key privada.
+- Lo que sucede es que aparece la misma clave.
 
 ## **4. Personalización del prompt Bash**
 
-- Configuraremos el fichero ``/home/peraza1/.bashrc``en la máquina servidor.
+- Configuraremos el fichero ``/home/peraza1/.bashrc`` en la máquina servidor.
 
 ![](img/032.png)
 
@@ -150,7 +150,11 @@
 
 ## **5. Autenticación mediante claves públicas**
 
+- Generamos un nuevo par de claves.
+
 ![](img/037.png)
+
+- Ahora vamos a copiar la clave pública
 
 ![](img/040.png)
 
@@ -172,17 +176,23 @@
 
 ## **6. Uso de SSH como túnel para X**
 
-- En el servidor instalaremos Geany.
+- En el servidor instalaremos una aplicación de entorno gráfico (APP1), en este caso instalaremos **Geany**.
 
 ![](img/044.png)
 
+- Modificaremos el fichero de configuración del servidor SSH GNU/Linux,para permitir la ejecución de aplicaciones gráficas, desde los clientes.
+
 ![](img/048.png)
+
+- Reiniciaremos el servicio ``sshd``
 
 ![](img/046.png)
 
 - Vamos al cliente y comprobamos que no está instalado el programa APP1.
 
 ![](img/047.png)
+
+- Nos conectamos de forma remota al servidor, y ahora ejecutamos APP1 de forma remota.
 
 ![](img/049.png)
 
