@@ -168,7 +168,7 @@
 
 ![](img/043.png)
 
-FALTA CAPTURA WINDOWS
+![](img/081.png)
 
 ## **6. Uso de SSH como túnel para X**
 
@@ -202,14 +202,105 @@ FALTA CAPTURA WINDOWS
 
 ### **8.1 Restricción sobre un usuario**
 
+- Modificaremos el fichero de configuración del servidor SSH GNU/Linux para restringir el acceso a determinados usuarios.
+
 ![](img/054.png)
 
 ![](img/056.png)
 
+- Comprobamos la restricción al acceder desde los clientes
+
+  - ``cliente23g``
 ![](img/057.png)
+
+  - ``cliente23w``
+  ![](img/082.png)
 
 ### **8.2 Restricción sobre una aplicación**
 
+- Crearemos el grupo remoteapps ,y dentro incluiremos al usuario ``peraza4``
 
+![](img/058.png)
+
+![](img/059.png)
+
+- Localizamos el programa APP1 y vemos que tiene permisos 755.
+
+![](img/060.png)
+
+- Cambiamos el grupo propietario a remoteapps , y pondremos los permisos del programa APP1 a 750.
+
+![](img/061.png)
+
+![](img/062.png)
+
+- Comprobamos el funcionamiento en el servidor local y desde el cliente23g en remoto.
+
+![](img/063.png)
+
+![](img/064.png)
 
 ## **9. Servidor SSH en Windows**
+
+- Añadir en ``C:\Windows\System32\drivers\etc\hosts`` el equipo ``cliente23g`` y ``cliente23w``.
+
+![](img/074.png)
+
+- Comprobamos haciendo ping a ambos equipos
+
+![](img/075.png)
+
+### **9.1 Instalación y configuración del servidor SSH en Windows**
+
+- Descargaremos la última versión de OpenSSH.
+
+![](img/065.png)
+
+- Descomprimir en ``C:\Program Files\OpenSSH``
+
+![](img/066.png)
+
+- Iniciaremos PowerShell como Administrador y nos movemos hasta ``C:\Program Files\OpenSSH``.
+
+- Ejecutamos los siguientes comandos para instalar los servicios `sshd` y `ssh-agent`:
+
+```
+PS> Set-ExecutionPolicy –ExecutionPolicy Bypass
+PS> .\install-sshd.ps1
+```
+![](img/067.png)
+
+- Al terminar debe indicar que los servicios se han instalado de forma satisfactoria. Podemos comprobar que se han
+instalado los servicios con el siguiente comando: `PS> Get-Service sshd,ssh-agent`
+
+![](img/069.png)
+
+- Generamos las claves del servidor:
+
+![](img/070.png)
+
+![](img/071.png)
+
+- Habilitamos una regla en el Firewall de Windows, que permita las conexiones TCP entrantes en el puerto 22 (SSH). Además iniciaremos el servicio ``sshd``.
+
+![](img/072.png)
+
+- Comprobamos.
+
+![](img/073.png)
+
+### **9.2 Comprobar acceso SSH de los Clientes Windows y GNU/Linux en el servidor SSH Windows**
+
+- Windows (cliente23w)
+
+![](img/076.png)
+
+![](img/077.png)
+
+![](img/080.png)
+
+- GNU/Linux (cliente23g)
+
+![](img/078.png)
+
+![](img/079.png)
