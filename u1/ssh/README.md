@@ -150,15 +150,63 @@
 
 ## **5. Autenticación mediante claves públicas**
 
+![](img/037.png)
 
+![](img/040.png)
+
+- Comprobamos que la clave que acabamos de copiar se haya copiado correctamente.
+
+![](img/041.png)
+
+![](img/042.png)
+
+- Comprobaremos en los clientes que ahora al accedes por SSH al usuario `peraza4`:
+
+  - `cliente23g`, NO se pide password.
+
+  - `cliente23w`, SI se pide password.
+
+![](img/043.png)
+
+FALTA CAPTURA WINDOWS
 
 ## **6. Uso de SSH como túnel para X**
 
+- En el servidor instalaremos Geany.
+
+![](img/044.png)
+
+![](img/048.png)
+
+![](img/046.png)
+
+- Vamos al cliente y comprobamos que no está instalado el programa APP1.
+
+![](img/047.png)
+
+![](img/049.png)
+
 ## **7. Aplicaciones Windows nativas**
+
+- Instalaremos el emulador Wine en el `server23g`.
+
+![](img/051.png)
+
+- Comprobamos el funcionamiento de APP2 en `server23g` y accediendo dede `cliente23g`.
+
+![](img/052.png)
+
+![](img/053.png)
 
 ## **8. Restricciones de uso**
 
 ### **8.1 Restricción sobre un usuario**
+
+![](img/054.png)
+
+![](img/056.png)
+
+![](img/057.png)
 
 ### **8.2 Restricción sobre una aplicación**
 
