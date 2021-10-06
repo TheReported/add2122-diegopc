@@ -106,24 +106,31 @@
 
 - Vamos a combiar o volver a generar nuevas claves públicas/privadas que identifican nuestro servidor.
 
-![](img/027.png)
+![](img/084.png)
 
 - Reiniciar el servicio SSH y comprobarlo.
 
-![](img/028.png)
+![](img/087.png)
 
 
 ### **3.2 Comprobamos**
 
 - Comprobar qué sucede al volver a conectarnos desde los dos clientes, usando los usuarios peraza2 y peraza1. ¿Qué sucede?
 
+- Ocurre el siguiente error, para solucionarlo debemos de poner el siguiente comando:
+`ssh-keygen -R server23g -f /home/diego/.ssh/known_hosts`
+
+![](img/085.png)
+
+![](img/086.png)
+
+- Una vez hemos solucionado el error, nos dejará conectarnos desde los clientes.
+
 ![](img/029.png)
 
 ![](img/030.png)
 
 ![](img/031.png)
-
-- Lo que sucede es que aparece la misma clave.
 
 ## **4. Personalización del prompt Bash**
 
