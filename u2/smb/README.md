@@ -247,7 +247,6 @@ UUID=b59cefcb-f362-4ea1-84d4-ef03337066d0  swap                    swap   defaul
 
 //172.19.23.31/barco             /mnt/remoto23/barco    cifs username=pirata1,password=pirata1          0  0
 
-
 ```
 
 - Para verificar que la configuración que hemos realizado es correcta, probaremos a realizar un montaje de forma manual con el siguiente comando y comprobamos:
