@@ -14,7 +14,11 @@ Vamos a necesitar las siguientes máquinas:
 
 #### **1.1 Preparativos**
 
+- Configuración de red
+
 ![](img/002.png)
+
+- Fichero /etc/hosts
 
 ![](img/001.png)
 
@@ -59,7 +63,7 @@ Vamos a necesitar las siguientes máquinas:
 
 ![](img/011.png)
 
-- Hacemos una copia de seguridad del fichero de configuración antes de modicarlo.
+- Hacemos una copia de seguridad del fichero de configuración antes de modificarlo.
 
 ![](img/012.png)
 
@@ -69,7 +73,7 @@ Vamos a necesitar las siguientes máquinas:
 
 ![](img/015.png)
 
-- Reiniciamos la MV y comrpobamos:
+- Reiniciamos la MV y comprobamos que los puertos 139 y 445 están abiertos:
 
 ![](img/016.png)
 
@@ -79,7 +83,7 @@ Vamos a necesitar las siguientes máquinas:
 
 ![](img/020.png)
 
-- Verificamos la sintaxis
+- Verificamos la sintaxis.
 
 ![](img/021.png)
 
@@ -95,7 +99,7 @@ Vamos a necesitar las siguientes máquinas:
 
 ![](img/024.png)
 
-- Comrpobamos la lista de usuarios de Samba.
+- Comprobamos la lista de usuarios de Samba.
 
 ![](img/026.png)
 
