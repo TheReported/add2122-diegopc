@@ -19,12 +19,21 @@ Vamos a necesitar las siguientes máquinas:
 ![](img/001.png)
 
 #### **1.2 Usuarios locales**
+- Crearemos los siguientes grupos
 
 ![](img/003.png)
 
+- Editamos el fichero `/etc/passwd` , modificaremos el usuario sambaguest y le ponemos como shell `/bin/false`
+
 ![](img/007.png)
 
+- Creamos los siguientes usuarios:
+
 ![](img/005.png)
+
+-  Dentro del grupo `piratas` incluir a los usuarios `pirata1`, `pirata2` y `supersamba`.
+* Dentro del grupo `soldados` incluir a los usuarios `soldado1` y `soldado2` y `supersamba`.
+* Dentro del grupo `sambausers`, poner a todos los usuarios `soldados`, `piratas`, `supersamba` y a `sambaguest`.
 
 ![](img/006.png)
 
@@ -46,7 +55,11 @@ Vamos a necesitar las siguientes máquinas:
 
 #### **1.4 Configurar el servidor Samba**
 
+- Comprobamos por yast de que el paquete ya viene instalado.
+
 ![](img/011.png)
+
+- Hacemos una copia de seguridad del fichero de configuración antes de modicarlo.
 
 ![](img/012.png)
 
@@ -66,17 +79,29 @@ Vamos a necesitar las siguientes máquinas:
 
 ![](img/020.png)
 
+- Verificamos la sintaxis
+
 ![](img/021.png)
+
+- Consultamos el contenido del fichero de configuración.
 
 ![](img/022.png)
 
 #### **1.6 Usuarios Samba**
 
+- Después de crear los usuarios en el sistema, tenemos que añadirlos a Samba.
+
+- `smbpasswd -a USUARIO`, para crear clave Samba de USUARIO.
+
 ![](img/024.png)
+
+- Comrpobamos la lista de usuarios de Samba.
 
 ![](img/026.png)
 
 #### **1.7 Reiniciar**
+
+- Comprobamos de que el servidor SMB/CIF está a la escucha.
 
 ![](img/027.png)
 
@@ -85,23 +110,39 @@ Vamos a necesitar las siguientes máquinas:
 
 ![](img/061.png)
 
+- Configuramos el fichero ``c:\Windows\System32\drivers\etc\hosts``
+
 ![](img/028.png)
+
+- Comprobamos de que en los clientes Windows, el software necesario ya viene preinstalado.
 
 ![](img/063.png)
 
 #### **2.1 Cliente Windows GUI**
 
+- Escribimos ``//172.19.23.31`` y vemos lo siguiente:
+
 ![](img/029.png)
 
+- Accederemos al recurso compartido ``public``.
+
 ![](img/030.png)
+
+- Accederemos al recurso compartido ``castillo`` con el usuario ``soldado1``.
 
 ![](img/031.png)
 
 ![](img/032.png)
 
+- Veremos las conexiones abiertas en la Powershell y después borramos todas las conexión SMB/CIFS que se hayan realizado.
+
 ![](img/033.png)
 
+- Accederemos al recurso compartido ``barco`` con el usuario ``pirata1``.
+
 ![](img/034.png)
+
+- Nos vamos al servidor Samba y comprobamos los resultados de los siguientes comandos:
 
 ![](img/035.png)
 
@@ -109,11 +150,17 @@ Vamos a necesitar las siguientes máquinas:
 
 #### **2.2 Cliente Windows comandos**
 
+- Vemos que no hay conexiones establecidas y también los recursos del servidor remoto.
+
 ![](img/037.png)
+
+- Montaremos el recurso barco de forma persistente. Para ello lo primero será crear una conexión con el recurso compartido y lo montaráen la unidad S.
 
 ![](img/038.png)
 
 ![](img/041.png)
+
+- Nos vamos al servidor Samba y comprobamos los resultados de los siguientes comandos:
 
 ![](img/039.png)
 
@@ -123,11 +170,17 @@ Vamos a necesitar las siguientes máquinas:
 
 ![](img/064.png)
 
+- Configuramos el fichero ``/etc/hosts``
+
 ![](img/042.png)
 
 #### **3.1 Cliente GNU/Linux GUI**
 
+- Accedemos al recurso compartido del servidor de Samba.
+
 ![](img/043.png)
+
+- Probamos a acceder y crear carpetas/archivos en ``castillo`` y en ``barco``.
 
 ![](img/044.png)
 
@@ -137,7 +190,11 @@ Vamos a necesitar las siguientes máquinas:
 
 ![](img/047.png)
 
+- Comprobamos que el recurso `public` es de sólo lectura.
+
 ![](img/048.png)
+
+- Nos vamos al servidor Samba y comprobamos los resultados de los siguientes comandos:
 
 ![](img/049.png)
 
@@ -145,11 +202,19 @@ Vamos a necesitar las siguientes máquinas:
 
 #### **3.2 Cliente GNU/Linux comandos**
 
+- Probar desde el cliente GNU/Linux el comando ``smbclient --list 172.19.23.31``, que muestra los recursos SMB/CIFS del servidor remoto.
+
 ![](img/051.png)
+
+- Ahora creamos en local la carpeta ``/mnt/remoto23/castillo``
 
 ![](img/052.png)
 
+- Montamos el recurso compartido y comprobamos que el recurso ha sido montado correctamente.
+
 ![](img/053.png)
+
+- Nos vamos al servidor Samba y comprobamos los resultados de los siguientes comandos:
 
 ![](img/054.png)
 
@@ -158,8 +223,60 @@ Vamos a necesitar las siguientes máquinas:
 
 #### **3.3 Montaje automático**
 
+- Reiniciamos la MV y vemos que los recursos ya no están montados, porque el montaje fue temporal.
+
 ![](img/056.png)
+
+- Ahora modificaremos el fichero /etc/fstab e incluimos la siguiente línea.
 
 ![](img/060.png)
 
+```
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /                       btrfs  defau>
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /var                    btrfs  subvo>
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /usr/local              btrfs  subvo>
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /tmp                    btrfs  subvo>
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /srv                    btrfs  subvo>
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /root                   btrfs  subvo>
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /opt                    btrfs  subvo>
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /home                   btrfs  subvo>
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /boot/grub2/x86_64-efi  btrfs  subvo>
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /boot/grub2/i386-pc     btrfs  subvo>
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /.snapshots             btrfs  subvo>
+UUID=b59cefcb-f362-4ea1-84d4-ef03337066d0  swap                    swap   defau>
+
+//172.19.23.31/barco             /mnt/remoto23/barco    cifs username=pirata1,p>
+
+
+
+```
+
+- Para verificar que la configuración que hemos realizado es correcta, probaremos a realizar un montaje de forma manual con el siguiente comando y comprobamos:
+
 ![](img/059.png)
+
+# **4. Preguntas para resolver**
+
+### Servicio y programas:
+
+* **¿Por qué tenemos dos servicios (smb y nmb) para Samba?**
+
+- **SMB** es el servicio de inicio central de Samba, que es principalmente responsable de establecer el diálogo entre el servidor Linux Samba y el cliente Samba, verificar la identidad del usuario y proporcionar archivo e impresión.
+
+- **NMB** es el responsable de la resolución, similar a la función implementada por DNS, NMB puede asociar el nombre del grupo de trabajo compartido por el sistema Linux con su IP
+
+### Usuarios:
+
+* **¿Las claves de los usuarios en GNU/Linux deben ser las mismas que las que usa Samba?**
+
+No, deben ser distintas por seguridad.
+
+* **¿Puedo definir un usuario en Samba llamado soldado3, y que no exista como usuario del sistema?**
+
+No, primero hay que definirlo en el servidor y luego implementarle la configuración de Samba.
+
+![](img/065.png)
+
+* **¿Cómo podemos hacer que los usuarios soldado1 y soldado2 no puedan acceder al sistema pero sí al samba? (Consultar `/etc/passwd`)**
+
+![](img/066.png)
