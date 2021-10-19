@@ -232,21 +232,20 @@ Vamos a necesitar las siguientes máquinas:
 ![](img/060.png)
 
 ```
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /                       btrfs  defau>
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /var                    btrfs  subvo>
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /usr/local              btrfs  subvo>
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /tmp                    btrfs  subvo>
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /srv                    btrfs  subvo>
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /root                   btrfs  subvo>
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /opt                    btrfs  subvo>
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /home                   btrfs  subvo>
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /boot/grub2/x86_64-efi  btrfs  subvo>
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /boot/grub2/i386-pc     btrfs  subvo>
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /.snapshots             btrfs  subvo>
-UUID=b59cefcb-f362-4ea1-84d4-ef03337066d0  swap                    swap   defau>
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /                       btrfs  defaults                      0  0
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /var                    btrfs  subvol=/@/var                 0  0
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /usr/local              btrfs  subvol=/@/usr/local           0  0
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /tmp                    btrfs  subvol=/@/tmp                 0  0
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /srv                    btrfs  subvol=/@/srv                 0  0
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /root                   btrfs  subvol=/@/root                0  0
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /opt                    btrfs  subvol=/@/opt                 0  0
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /home                   btrfs  subvol=/@/home                0  0
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /boot/grub2/x86_64-efi  btrfs  subvol=/@/boot/grub2/x86_64-efi  0  0
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /boot/grub2/i386-pc     btrfs  subvol=/@/boot/grub2/i386-pc  0  0
+UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /.snapshots             btrfs  subvol=/@/.snapshots          0  0
+UUID=b59cefcb-f362-4ea1-84d4-ef03337066d0  swap                    swap   defaults                      0  0
 
-//172.19.23.31/barco             /mnt/remoto23/barco    cifs username=pirata1,p>
-
+//172.19.23.31/barco             /mnt/remoto23/barco    cifs username=pirata1,password=pirata1          0  0
 
 
 ```
