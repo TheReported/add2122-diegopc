@@ -212,51 +212,51 @@ Vamos a necesitar las siguientes máquinas:
 
 - Ahora creamos en local la carpeta ``/mnt/remoto23/castillo``
 
-![](img/052.png)
+![](img/068.png)
 
 - Montamos el recurso compartido y comprobamos que el recurso ha sido montado correctamente.
 
-![](img/053.png)
+![](img/069.png)
 
 - Nos vamos al servidor Samba y comprobamos los resultados de los siguientes comandos:
 
-![](img/054.png)
+![](img/071.png)
 
-![](img/055.png)
+![](img/070.png)
 
 
 #### **3.3 Montaje automático**
 
 - Reiniciamos la MV y vemos que los recursos ya no están montados, porque el montaje fue temporal.
 
-![](img/056.png)
+![](img/074.png)
 
 - Ahora modificaremos el fichero /etc/fstab e incluimos la siguiente línea.
 
-![](img/060.png)
+![](img/072.png)
 
 ```
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /                       btrfs  defaults                      0  0
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /var                    btrfs  subvol=/@/var                 0  0
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /usr/local              btrfs  subvol=/@/usr/local           0  0
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /tmp                    btrfs  subvol=/@/tmp                 0  0
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /srv                    btrfs  subvol=/@/srv                 0  0
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /root                   btrfs  subvol=/@/root                0  0
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /opt                    btrfs  subvol=/@/opt                 0  0
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /home                   btrfs  subvol=/@/home                0  0
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /boot/grub2/x86_64-efi  btrfs  subvol=/@/boot/grub2/x86_64-efi  0  0
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /boot/grub2/i386-pc     btrfs  subvol=/@/boot/grub2/i386-pc  0  0
-UUID=b7bf7d02-d6af-4cfe-83cf-11eb4013b9ba  /.snapshots             btrfs  subvol=/@/.snapshots          0  0
-UUID=b59cefcb-f362-4ea1-84d4-ef03337066d0  swap                    swap   defaults                      0  0
+UUID=b3dcc92d-73ac-4b50-a96d-6c2568b087ee  /                       btrfs  defaults                      0  0
+UUID=b3dcc92d-73ac-4b50-a96d-6c2568b087ee  /var                    btrfs  subvol=/@/var                 0  0
+UUID=b3dcc92d-73ac-4b50-a96d-6c2568b087ee  /usr/local              btrfs  subvol=/@/usr/local           0  0
+UUID=b3dcc92d-73ac-4b50-a96d-6c2568b087ee  /tmp                    btrfs  subvol=/@/tmp                 0  0
+UUID=b3dcc92d-73ac-4b50-a96d-6c2568b087ee  /srv                    btrfs  subvol=/@/srv                 0  0
+UUID=b3dcc92d-73ac-4b50-a96d-6c2568b087ee  /root                   btrfs  subvol=/@/root                0  0
+UUID=b3dcc92d-73ac-4b50-a96d-6c2568b087ee  /opt                    btrfs  subvol=/@/opt                 0  0
+UUID=b3dcc92d-73ac-4b50-a96d-6c2568b087ee  /home                   btrfs  subvol=/@/home                0  0
+UUID=b3dcc92d-73ac-4b50-a96d-6c2568b087ee  /boot/grub2/x86_64-efi  btrfs  subvol=/@/boot/grub2/x86_64-efi  0  0
+UUID=b3dcc92d-73ac-4b50-a96d-6c2568b087ee  /boot/grub2/i386-pc     btrfs  subvol=/@/boot/grub2/i386-pc  0  0
+UUID=b3dcc92d-73ac-4b50-a96d-6c2568b087ee  /.snapshots             btrfs  subvol=/@/.snapshots          0  0
+UUID=ef98bdad-be2c-4a7f-b4af-a61178b29238  swap                    swap   defaults                      0  0
 
 //172.19.23.31/barco             /mnt/remoto23/barco    cifs username=pirata1,password=pirata1          0  0
 
 
 ```
 
-- Para verificar que la configuración que hemos realizado es correcta, probaremos a realizar un montaje de forma manual con el siguiente comando y comprobamos:
+- Reinicamos la MV Cliente y comprobamos que se ha realizado el montaje:
 
-![](img/059.png)
+![](img/073.png)
 
 # **4. Preguntas para resolver**
 
