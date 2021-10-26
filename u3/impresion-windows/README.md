@@ -108,6 +108,8 @@
 
 ![](img/046.png)
 
+#### **3.3 Comprobar desde el navegador**
+
 ![](img/047.png)
 
 ![](img/048.png)
