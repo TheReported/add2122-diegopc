@@ -91,7 +91,7 @@
 
 ##### **4.2 Agregar más usuarios con clave encriptada**
 
-- Koji
+- **Koji**
 
 ![](img/018.png)
 
@@ -99,7 +99,7 @@
 
 ![](img/020.png)
 
-- Boss
+- **Boss**
 
 ![](img/021.png)
 
@@ -107,7 +107,7 @@
 
 ![](img/023.png)
 
-- Doctor Infierno
+- **Doctor Infierno**
 
 ![](img/027.png)
 
