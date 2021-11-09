@@ -17,7 +17,7 @@
 
 ### **2. Instalar el Servidor LDAP**
 
-##### **2.1 Instalación del paquete**
+#### **2.1 Instalación del paquete**
 
 - Instalamos el script de instalación:
 
@@ -27,7 +27,7 @@
 
 ![](img/005.png)
 
-##### **2.2 Configurar la instancia**
+#### **2.2 Configurar la instancia**
 
 - Creamos el fichero ``/root/instance.inf`` con el siguiente contenido.
 
@@ -41,7 +41,7 @@
 
 ![](img/008.png)
 
-##### **2.3 Comprobamos el servicio**
+#### **2.3 Comprobamos el servicio**
 
 - Comprobamos si el servicio está activo:
 
@@ -53,7 +53,7 @@
 
  ![](img/010.png)
 
-##### **2.4 Comprobamos el acceso al contenido del LDAP**
+#### **2.4 Comprobamos el acceso al contenido del LDAP**
 
 - Mostramos el contenido de nuestra base de datos LDAP:
 
@@ -65,17 +65,17 @@
 
 ### **3. Añadir usuarios LDAP por comandos**
 
-##### **3.1 Buscar Unidades Organizativas**
+#### **3.1 Buscar Unidades Organizativas**
 
   ![](img/014.png)
 
-##### **3.2 Agregar usuarios**
+#### **3.2 Agregar usuarios**
 
 - Creamos el fichero `mazinger-add.ldif` con la siguiente información para crear el usuario ``mazinger``:
 
 ![](img/015.png)
 
-##### **3.3 Comprobar el nuevo usuario**
+#### **3.3 Comprobar el nuevo usuario**
 
 - Escribimos los datos del fichero ldif anterioren LDAP y comprobamos si se ha creado el usuario correctamente en el LDAP:
 
@@ -83,13 +83,13 @@
 
 ### **4. Contraseñas encriptadas**
 
-##### **4.1 Herramienta slappasswd**
+#### **4.1 Herramienta slappasswd**
 
 - Instalamos la herramienta ``slappasswd``:
 
 ![](img/017.png)
 
-##### **4.2 Agregar más usuarios con clave encriptada**
+#### **4.2 Agregar más usuarios con clave encriptada**
 
 - **Koji**
 
@@ -115,7 +115,7 @@
 
 ![](img/029.png)
 
-##### **4.3 Comprobar los usuarios creados**
+#### **4.3 Comprobar los usuarios creados**
 
 - Iremos a la MV Cliente y comprobamos que el puerto LDAP del servidor está abierto.
 
