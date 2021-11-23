@@ -125,3 +125,51 @@
 - Iniciaremos la MV y entraremos por SSH, para comprobar de que se ha instalado nuestro paquete correctamente.
 
 ![](img/034.png)
+
+### **5. Proyecto Bulls**
+
+#### **5.1 Preparar la MV VirtualBox**
+
+- Iremos a la MV que tengamos ya configurada y con el OpenSSH instalado.
+
+- Crearemos el usuario vagrant y pondremos como clave `vagrant` al usuario ``root`` y ``vagrant``.
+
+![](img/100.png)
+
+- Creamos la carpeta de configuración SSH.
+
+![](img/101.png)
+
+- Descargamos la clave pública.
+
+![](img/102.png)
+
+- Modificamos los permisos de la carpeta.
+
+![](img/103.png)
+
+- Modificamos el propietario de la carpeta.
+
+![](img/104.png)
+
+- Añadimos la siguiente línea al fichero `/etc/sudoers`
+
+![](img/105.png)
+
+- Comprobamos que la versión de las VirtualBox Guest Additions sea compatible.
+
+![](img/106.png)
+
+- Apagaremos la MV.
+
+![](img/110.png)
+
+#### **5.2 Crear caja Vagrant**
+
+- Creamos la carpeta `vagrant23-bulls` , mostramos los nombres de nuestras MVs y creamos nuestra propia caja.
+
+![](img/109.png)
+
+- Añadimos la nueva caja creada por nosotros y consultamos la lista de cajas de Vagrant disponibles.
+
+![](img/111.png)
