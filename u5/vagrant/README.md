@@ -176,7 +176,7 @@
 
 #### **5.3 Usar la nueva caja**
 
-- Creamos el fichero Vagrantfile.
+- Creamos el fichero `Vagrantfile`.
 
 ![](img/112.png)
 
