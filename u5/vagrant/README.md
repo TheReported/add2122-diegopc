@@ -173,3 +173,13 @@
 - Añadimos la nueva caja creada por nosotros y consultamos la lista de cajas de Vagrant disponibles.
 
 ![](img/111.png)
+
+#### **5.3 Usar la nueva caja**
+
+- Creamos el fichero Vagrantfile.
+
+![](img/112.png)
+
+- Nos conectamos por SSH.
+
+![](img/113.png)
