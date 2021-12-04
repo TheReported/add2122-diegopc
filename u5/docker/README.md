@@ -2,11 +2,11 @@
 
 ### **1. Instalación**
 
-- Instalamos docker en OpenSUSE:
+- Instalamos ``docker`` en OpenSUSE:
 
 ![](img/001.png)
 
-- Inicamos el servicio, lo habilitamos para que automáticamente se inicie al encender la máquina, miraremos el estado del servicio y por último consultaremos que el estado de IP_FORWARD esté activo.
+- Inicamos el servicio, lo habilitamos para que automáticamente se inicie al encender la máquina, miraremos el estado del servicio y por último consultaremos que el estado de ``IP_FORWARD`` esté activo.
 
 ![](img/002.png)
 
@@ -14,7 +14,7 @@
 
 **Como usuario root**
 
-- Incluiremos a nuestro usuario (diego) como miembro del grupo docker y mostraremos que pertenecemos al grupo docker.
+- Incluiremos a nuestro usuario (``diego``) como miembro del grupo ``docker`` y mostraremos que pertenecemos al grupo ``docker``.
 
 ![](img/003.png)
 
@@ -66,7 +66,7 @@
 
 **Instalar aplicaciones dentro del contenedor**
 
-- Comprobamos que estamos en Debian, actualizamos los paquetes, instalamos nginx y vim en el contenedor.
+- Comprobamos que estamos en Debian, actualizamos los paquetes, instalamos ``nginx`` y vim en el contenedor.
 
 ![](img/014.png)
 
@@ -233,3 +233,5 @@ Crear nuestra imagen `holamundo`:
 ![](img/052.png)
 
 ![](img/053.png)
+
+![](img/054.png)
