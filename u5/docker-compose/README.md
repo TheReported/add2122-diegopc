@@ -57,7 +57,7 @@
 
 ![](img/009.png)
 
-- Creamos el directorio `compose23mysql` y dentro, el directorio `data`, además de crear el fichero ``docker-compose.yaml`` con el siguiente contenido y validarlo.
+- Creamos el directorio `compose23mysql` y dentro, el directorio `data`, además crearemos el fichero ``docker-compose.yaml`` con el siguiente contenido y lo validamos.
 
 ![](img/010.png)
 
@@ -93,7 +93,7 @@
 
 ![](img/026.png)
 
-- Levantamos el contenedor, comprobamos que se han descargado las dos imágenes.
+- Levantamos el contenedor y comprobamos que se han descargado las dos imágenes.
 
 ![](img/027.png)
 
