@@ -1,0 +1,11 @@
+---
+# Primer Playbook en Ansible
+ - hosts: slave23g
+   tasks:
+   - name: Hacer ping
+     ping:
+
+ - hosts: slave23w
+   tasks:
+   - name: Hacer ping
+     win_ping:

@@ -1,0 +1,11 @@
+---
+# Tercer Playbook en Ansible
+ - hosts: slave23g
+   tasks:
+   - name: Desinstalar paquete en OpenSUSE
+     zypper: name=geany state=absent
+
+ - hosts: slave23w
+   tasks:
+   - name: Desinstalar paquete en Windows
+     win_chocolatey: name=firefox state=absent

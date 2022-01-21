@@ -1,0 +1,11 @@
+---
+# Segundo Playbook en Ansible
+ - hosts: slave23g
+   tasks:
+   - name: Instalar paquete en OpenSUSE
+     zypper: name=geany state=present
+
+ - hosts: slave23w
+   tasks:
+   - name: Instalar paquete en Windows
+     win_chocolatey: name=firefox state=present

@@ -1,0 +1,24 @@
+---
+# Cuarto Playbook en Ansible
+ - hosts: slave23g
+   remote_user: root
+   tasks:
+   - name: Instalar paquete en OpenSUSE
+     zypper: name=apache2 state=present update_cache=true
+     notify:
+       - "Inicia el servidor web Apache2"
+   handlers:
+     - name: Inicia el servidor web Apache2
+       service: name=apache2 state=started
+
+ - hosts: slave23w
+   become: false
+   remote_user: diego
+   tasks:
+   - name: Instalar paquete en Windows
+     win_chocolatey: name=apache-httpd state=present
+     notify:
+        - "Inicia el servidor web Apache HTTPD"
+   handlers:
+     - name: Inicia el servidor web Apache HTTPD
+       service: name=apache-httpd state=started

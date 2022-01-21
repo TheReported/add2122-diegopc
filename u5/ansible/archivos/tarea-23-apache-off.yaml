@@ -1,0 +1,24 @@
+---
+# Quinto Playbook en Ansible
+ - hosts: slave23g
+   remote_user: root
+   tasks:
+     - name: Para el servidor web Apache2
+       service: name=apache2 state=stopped
+       notify:
+         - "Desinstalar el paquete en OpenSUSE"
+   handlers:
+   - name: Desinstalar paquete en OpenSUSE
+     zypper: name=apache2 state=absent update_cache=true
+
+ - hosts: slave23w
+   become: false
+   remote_user: diego
+   tasks:
+     - name: Para el servidor web Apache HTTPD
+       service: name=apache-httpd state=stopped
+       notify:
+         - "Desinstalar el paquete en Windows"
+   handlers:
+   - name: Desinstalar paquete en Windows
+     win_chocolatey: name=apache-httpd state=absent
