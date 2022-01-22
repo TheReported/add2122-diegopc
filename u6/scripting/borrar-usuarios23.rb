@@ -1,14 +1,19 @@
 #!/usr/bin/env ruby
-puts "Eliminando 10 usuarios <diegob>"
+puts "\e[0;36mEliminando 10 usuarios <diegor>\e[m"
 
 user='diego'
 
 for var in 1..10 do
 	us="#{user}"+"#{var}"
-	system ("sudo userdel -r #{us}r ")
-
+	if (File.directory?("/home/#{us}r"))
+		system ("sudo userdel -r #{us}r > /dev/null 2>&1 ")
+		puts "\e[0;32mUsuario #{us}r eliminado\e[m"
+	else
+		puts "\e[1;31mLos usuarios ya han sido eliminados\e[m"
+		exit 0
+	end
 end
 
-puts "Comprobamos que se han eliminado los usuarios correctamente"
-system ("cat /etc/passwd | grep diego")
-puts "Usuarios eliminados correctamente"
+puts "\e[1;35mComprobamos que se han eliminado los usuarios correctamente\e[m"
+system ("cat /etc/passwd | grep diego --color=auto")
+system ("xcowsay ¡Usuarios borrados!")
