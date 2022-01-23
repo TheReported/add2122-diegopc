@@ -14,6 +14,10 @@
     + [2.1 Crear usuarios](#2.1)
     + [2.2 Borrar usuarios](#2.2)
 
+![](img/16.png)
+
+![](img/17.jpg)
+
 ### **0. Scripts** <a id=00></a>
 
 #### **Bash**
