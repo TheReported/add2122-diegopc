@@ -24,7 +24,7 @@
   + [crear-usuarios23.sh](files/crear-usuarios23.sh)
   + [borrar-usuarios23.sh](files/borrar-usuarios23.sh)
 
-**Ruby**
+#### **Ruby**
 
 + [crear-usuarios23.rb](files/crear-usuarios23.rb)
 + [borrar-usuarios23.rb](files/borrar-usuarios23.rb)
@@ -47,7 +47,7 @@
 
   ![](img/14.png)
 
-- Para estre script lo primero que hice fue poner mi nombre como variable `user`, lo segundo crear un bucle que lo que hiciese que la variable `i` contára del 1 al 10 incluyendolos.
+- Para este script lo primero que hice fue poner mi nombre como variable `user`, lo segundo crear un bucle que lo que hiciese que la variable `i` contára del 1 al 10 incluyendolos.
 
 - Tercero, cree una variable `us` que sumase las dos variables anteriores `user` y `i`.
 
