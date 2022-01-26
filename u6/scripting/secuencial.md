@@ -37,19 +37,25 @@
 
   ![](img/50.png)
 
-- Además, nos descargamos el paquete cowsay.
+- Además, nos descargamos el paquete ``cowsay`` y el paquete ``whois``.
 
   ![](img/4.png)
 
+  ![](img/60.png)
+
 #### **1.1 Crear usuarios <diegob>** <a id=1.1></a>
 
-- Creamos y realizamos el script `crear-usuarios23.sh`, para crear un número de 10 usuarios en el sistema con el nombre de `diego1b`, `diego2b`, etc.
+- Creamos y realizamos el script `crear-usuarios23.sh`, para crear un número de 10 usuarios en el sistema con el nombre de `diego1b`, `diego2b`, etc. Para poner la contraseña a los usuarios pondremos lo siguiente: `-p "$(mkpasswd --method=sha-512 'diego1b')`, esto sirve para que encripte la contraseña que vamos a poner, que en este caso es el nombre de usuario.
 
-  ![](img/56.png)
+  ![](img/61.png)
 
 ##### **Comprobamos**
 
   ![](img/52.png)
+
+- Iniciamos sesión con algún usuario creado.
+
+  ![](img/63.png)
 
 #### **1.2 Borrar usuarios <diegob>** <a id=1.1></a>
 
@@ -75,17 +81,21 @@
 
 #### **2.1 Crear usuarios <diegor>** <a id=2.1></a>
 
-- Creamos y realizamos el script `crear-usuarios23.rb`, para crear un número de 10 usuarios en el sistema con el nombre de `diego1r`, `diego2r`, etc.
+- Creamos y realizamos el script `crear-usuarios23.rb`, para crear un número de 10 usuarios en el sistema con el nombre de `diego1r`, `diego2r`, etc. Para poner la contraseña a los usuarios pondremos lo siguiente: `-p $(mkpasswd --method=sha-512 'diego1r')`, esto sirve para que encripte la contraseña que vamos a poner, que en este caso es el nombre de usuario.
 
-  ![](img/57.png)
+  ![](img/62.png)
 
 - Vemos que Ruby es muy parecido al lenguaje de Bash, por ejemplo para mostrar texto en Bash pondremos el comando `echo`, pero en Ruby se usa el comando `puts`.
 
-- Los comandos se ejecutarán con el método `system ()`.
+- Los comandos se ejecutarán con el método `system ("COMMAND")`.
 
 ##### **Comprobamos**
 
   ![](img/54.png)
+
+- Iniciamos sesión con algún usuario creado.
+
+  ![](img/64.png)
 
 #### **2.2 Borrar usuarios <diegor>** <a id=2.2></a>
 
@@ -98,3 +108,5 @@
 ##### **Comprobamos**
 
   ![](img/55.png)
+
+[Volver](#0)
