@@ -33,7 +33,7 @@
 
 ### **1. Práctica en Bash** <a id=1></a>
 
-- Para las dos prácticas que vamos a relizar crearemos un directorio `/home/diego/scripst23` y nos movemos a él.
+- Para las dos prácticas que vamos a relizar crearemos el directorio `/home/diego/scripst23` y nos movemos a él.
 
   ![](img/50.png)
 
@@ -45,7 +45,9 @@
 
 #### **1.1 Crear usuarios <diegob>** <a id=1.1></a>
 
-- Creamos y realizamos el script `crear-usuarios23.sh`, para crear un número de 10 usuarios en el sistema con el nombre de `diego1b`, `diego2b`, etc. Para poner la contraseña a los usuarios pondremos lo siguiente: `-p "$(mkpasswd --method=sha-512 'diego1b')`, esto sirve para que encripte la contraseña que vamos a poner, que en este caso es el nombre de usuario.
+- Creamos y realizamos el script `crear-usuarios23.sh`, para crear un número de 10 usuarios en el sistema con el nombre de `diego1b`, `diego2b`, etc.
+
+- Para poner la contraseña a los usuarios pondremos lo siguiente: `-p "$(mkpasswd --method=sha-512 'diego1b')`, esto sirve para que encripte la contraseña que vamos a poner, que en este caso es el nombre de usuario.
 
   ![](img/61.png)
 
@@ -63,7 +65,8 @@
 
   ![](img/58.png)
 
-- Para este script lo que hice fue más o menos lo mismo que en `crear-usuarios23.sh`, ya que solo modifique el comando `useradd` a `userdel`. Además añadí la siguiente línea al comando para que ocultase la salida de `no crontab for diego2b`= `> /dev/null 2&1`,y también añadí el comando `cowsay ....`.
+- Para este script lo que hice fue más o menos lo mismo que en `crear-usuarios23.sh`, ya que solo modifique el comando `useradd` a `userdel`.
+- Además añadí la siguiente línea al comando para que ocultase la salida de `no crontab for diego2b`= `> /dev/null 2&1`,y también añadí el comando `cowsay ....`.
 
 ##### **Comprobamos**
 
@@ -81,7 +84,9 @@
 
 #### **2.1 Crear usuarios <diegor>** <a id=2.1></a>
 
-- Creamos y realizamos el script `crear-usuarios23.rb`, para crear un número de 10 usuarios en el sistema con el nombre de `diego1r`, `diego2r`, etc. Para poner la contraseña a los usuarios pondremos lo siguiente: `-p $(mkpasswd --method=sha-512 'diego1r')`, esto sirve para que encripte la contraseña que vamos a poner, que en este caso es el nombre de usuario.
+- Creamos y realizamos el script `crear-usuarios23.rb`, para crear un número de 10 usuarios en el sistema con el nombre de `diego1r`, `diego2r`, etc.
+
+- Para poner la contraseña a los usuarios pondremos lo siguiente: `-p $(mkpasswd --method=sha-512 'diego1r')`, esto sirve para que encripte la contraseña que vamos a poner, que en este caso es el nombre de usuario.
 
   ![](img/62.png)
 
@@ -103,7 +108,8 @@
 
   ![](img/59.png)
 
-- Para este script lo que hice fue más o menos lo mismo que en `crear-usuarios23.rb`, ya que solo modifique el comando `useradd` a `userdel`. Además añadí la siguiente línea al comando para que ocultase la salida de `no crontab for diego2b`= `> /dev/null 2&1` ,y también añadí el comando `xcowsay ....`.
+- Para este script lo que hice fue más o menos lo mismo que en `crear-usuarios23.rb`, ya que solo modifique el comando `useradd` a `userdel`.
+- Además añadí la siguiente línea al comando para que ocultase la salida de `no crontab for diego2b`= `> /dev/null 2&1` ,y también añadí el comando `xcowsay ....`.
 
 ##### **Comprobamos**
 
