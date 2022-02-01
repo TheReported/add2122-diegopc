@@ -23,6 +23,8 @@
 
   + [conditional23.zip](files-conditional/conditional23.zip)
 
+[Volver](#0)
+
 ### **1. Práctica en Bash condicional** <a id=1></a>
 
 -  Para las dos prácticas que vamos a relizar crearemos el directorio `/home/diego/scripst23/conditional23` y nos movemos a él.
@@ -39,7 +41,11 @@
 
 #### **1.2 Comprobamos** <a id=1.2></a>
 
+- Creando los usuarios.
+
   ![](img-cond/7.png)
+
+- Borrando los usuarios.
 
   ![](img-cond/6.png)
 
@@ -61,6 +67,8 @@
 
   ![](img-cond/10.png)
 
+[Volver](#0)
+
 ### **2. Práctica en Ruby** <a id=2></a>
 
 #### **2.1 Condicional preguntando al usuario** <a id=2.1></a>
@@ -69,7 +77,11 @@
 
 #### **2.2 Comprobamos** <a id=2.2></a>
 
+- Creando los usuarios.
+
   ![](img-cond/14.png)
+
+- Borrando los usuarios.
 
   ![](img-cond/15.png)
 
@@ -87,11 +99,21 @@
 
 - Comprobamos.
 
-  ![](img-cond/19.png)
+  - Creando los usuarios.
 
-  ![](img-cond/20.png)
+    ![](img-cond/19.png)
 
-  ![](img-cond/18.png)
+  - Borrando los usuarios.
+
+    ![](img-cond/20.png)
+
+  - Argumento no válido.
+
+    ![](img-cond/17.png)
+
+    ![](img-cond/18.png)
+
+[Volver](#0)
 
 ### **3. Mejorar con código de salida (exit status)** <a id=3></a>
 
@@ -120,3 +142,5 @@
     ![](img-cond/27.png)
 
     ![](img-cond/28.png)
+
+[Volver](#0)
