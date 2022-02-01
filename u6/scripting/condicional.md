@@ -37,6 +37,8 @@
 
 #### **1.1 Condicional preguntando al usuario** <a id=1.1></a>
 
+- Creamos el script `elegir23user.sh`, con el siguiente contenido:
+
   ![](img-cond/3.png)
 
 #### **1.2 Comprobamos** <a id=1.2></a>
@@ -51,6 +53,8 @@
 
 #### **1.3 Condicional usando variable fija** <a id=1.3></a>
 
+- Creamos el script `elegir23var.sh`, con el siguiente contenido:
+
   ![](img-cond/4.png)
 
 - Comprobamos.
@@ -58,6 +62,8 @@
   ![](img-cond/8.png)
 
 #### **1.4 Condicional usando argumentos** <a id=1.4></a>
+
+- Creamos el script `elegir23arg.sh`, con el siguiente contenido:
 
   ![](img-cond/5.png)
 
@@ -73,6 +79,8 @@
 
 #### **2.1 Condicional preguntando al usuario** <a id=2.1></a>
 
+- Creamos el script `elegir23user.rb`, con el siguiente contenido:
+
   ![](img-cond/11.png)
 
 #### **2.2 Comprobamos** <a id=2.2></a>
@@ -87,6 +95,8 @@
 
 #### **2.3 Condicional usando variable fija** <a id=2.3></a>
 
+- Creamos el script `elegir23var.rb`, con el siguiente contenido:
+
   ![](img-cond/12.png)
 
 - Comprobamos.
@@ -94,6 +104,8 @@
   ![](img-cond/16.png)
 
 #### **2.4 Condicional usando argumentos** <a id=2.4></a>
+
+- Creamos el script `elegir23arg.rb`, con el siguiente contenido:
 
   ![](img-cond/13.png)
 
@@ -119,15 +131,23 @@
 
 - Exit status con Bash.
 
-  ![](img-cond/21.png)
+  - Creamos el script `crear-usuarios23exitstatus.sh`, con el siguiente contenido:
 
-  ![](img-cond/22.png)
+    ![](img-cond/21.png)
+
+  - Creamos el script `borrar-usuarios23exitstatus.sh`, con el siguiente contenido:
+
+    ![](img-cond/22.png)
 
 - Exit status con Ruby.
 
-  ![](img-cond/23.png)
+  - Creamos el script `crear-usuarios23exitstatus.rb`, con el siguiente contenido:
 
-  ![](img-cond/24.png)
+    ![](img-cond/23.png)
+
+  - Creamos el script `borrar-usuarios23exitstatus.rb`, con el siguiente contenido:
+
+    ![](img-cond/24.png)
 
 - Comprobamos.
 
