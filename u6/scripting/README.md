@@ -47,7 +47,7 @@
 
   ![](img/14.png)
 
-- Para este script lo primero que hice fue poner mi nombre como variable `user`, lo segundo crear un bucle que lo que hiciese que la variable `i` contára del 1 al 10 incluyendolos.
+- Para este script lo primero que hice fue poner mi nombre como variable `user`, lo segundo crear un bucle que lo que hiciese, es que la variable `i` contára del 1 al 10 incluyendolos.
 
 - Tercero, cree una variable `us` que sumase las dos variables anteriores `user` y `i`.
 
