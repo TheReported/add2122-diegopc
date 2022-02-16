@@ -57,7 +57,7 @@
 
   ![](img/11.png)
 
-- Una vez hecho todo lo anterior le damos a la flecha de abajo izquierda y ya tendriamos creado el grupo con neustro bot.
+- Una vez hecho todo lo anterior le damos a la flecha de abajo izquierda y ya tendriamos creado el grupo con nuestro bot.
 
   ![](img/12.png)
 
@@ -97,7 +97,7 @@
 
 #### **1.3 Entrega** <a id="1.3"></a>
 
-  + [Script Bot23d](files/bot23.rb)
+  + [Script Bot23d](files/bot23d.rb)
   + [Funcionamiento del Bot23d](https://www.youtube.com/watch?v=FRh22RLe1ew)
 
 [Volver](#0)
