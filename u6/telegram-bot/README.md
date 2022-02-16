@@ -24,7 +24,7 @@
 
 ### **1. Crear un bot de Telegram con Ruby** <a id="1"></a>
 
-##### **1.1 Crar bot con BotFather** <a id="1.1"></a>
+#### **1.1 Crear bot con BotFather** <a id="1.1"></a>
 
 - Iniciamos telegram y buscamos el usuario `@BotFather`, también empezaremos la conversación y con la creación de nuestro bot con la orden `/newbot`.
 
@@ -61,7 +61,7 @@
 
   ![](img/12.png)
 
-##### **1.2 Crear un programa de Ruby** <a id="1.2"></a>
+#### **1.2 Crear un programa de Ruby** <a id="1.2"></a>
 
 - Instalamos la gema de ruby que permite comunicarse con Telegram.
 
@@ -95,7 +95,7 @@
 
   ![](img/20.png)
 
-##### **1.3 Entrega** <a id="1.3"></a>
+#### **1.3 Entrega** <a id="1.3"></a>
 
   + [Script Bot23d](files/bot23.rb)
   + [Funcionamiento del Bot23d](https://www.youtube.com/watch?v=FRh22RLe1ew)
@@ -106,7 +106,7 @@
 
 - Vamos a crear un servicio para nuestro Bot, de modo que se inicie siempre al arrancar el equipo y que podemos gestionarlo como el resto de servicios (usando el comando ``systemctl``).
 
-##### **2.1 Crear un servicio** <a id="2.1"></a>
+#### **2.1 Crear un servicio** <a id="2.1"></a>
 
 - Copiamos el script a `/usr/local/bin/bot23d` y lo hacemos ejecutable.
 
@@ -124,13 +124,13 @@
 
   ![](img/28.png)
 
-##### **2.2 Iniciar y activar el servicio** <a id="2.2"></a>
+#### **2.2 Iniciar y activar el servicio** <a id="2.2"></a>
 
 - Comprobamos que el estado del servicio está parado. Ahora iniciamos el servicio , comprobamos que está activo y por último habilitamos el servicio, de modo que se inicie automáticamente.
 
   ![](img/29.png)
 
-##### **2.3 Parar el proceso** <a id="2.3"></a>
+#### **2.3 Parar el proceso** <a id="2.3"></a>
 
 - Localizamos el identificador del proceso (PID) bot23d. Una vez localiczado el PID, emitimos una orden para que se cierre el proceso.
 
@@ -140,7 +140,7 @@
 
   ![](img/31.png)
 
-##### **2.4 Entrega** <a id="2.4"></a>
+#### **2.4 Entrega** <a id="2.4"></a>
 
   + [bot23.service](files/bot23.service)
 
@@ -148,7 +148,7 @@
 
 ### **3. Programar tareas** <a id="3"></a>
 
-##### **3.1 Controlador** <a id="3.1"></a>
+#### **3.1 Controlador** <a id="3.1"></a>
 
 - Creamos un nuevo script `/usr/local/bin/bot23controller`, con el siguiente contenido.
 
@@ -160,7 +160,7 @@
 
   ![](img/33.png)
 
-##### **3.2 Tareas programadas** <a id="3.2"></a>
+#### **3.2 Tareas programadas** <a id="3.2"></a>
 
 - Vamos a programar el script ``bot23controller`` para que se ejecute cada 5 minutos. Usaremos la herramienta ``crontab`` con el usuario root.
 
@@ -174,7 +174,7 @@
 
   ![](img/37.png)
 
-##### **3.3 Entrega** <a id="3.3"></a>
+#### **3.3 Entrega** <a id="3.3"></a>
 
   + [bot23controller.rb](files/bot23controller.rb)
 
